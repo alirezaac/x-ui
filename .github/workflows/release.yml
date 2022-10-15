@@ -1,4 +1,3 @@
-ᴀʟɪʀᴇᴢᴀ ᴀᴄ, [10/14/2022 10:00 PM]
 name: Release X-ui
 on:
   push:
@@ -120,9 +119,6 @@ jobs:
           sudo apt install gcc-s390x-linux-gnu -y
           CGO_ENABLED=1 GOOS=linux GOARCH=s390x CC=s390x-linux-gnu-gcc go build -o xui-release -v main.go
           mkdir x-ui
-
-ᴀʟɪʀᴇᴢᴀ ᴀᴄ, [10/14/2022 10:00 PM]
-
           cp xui-release x-ui/xui-release
           cp x-ui.service x-ui/x-ui.service
           cp x-ui.sh x-ui/x-ui.sh
