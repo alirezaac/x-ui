@@ -84,7 +84,7 @@ install_base() {
 #This function will be called when user installed x-ui out of sercurity
 config_after_install() {
     echo -e "${yellow}for security reason you must set an account and port! ${plain}"
-    read -p "Confrim to change congif?": config_confirm
+    read -p "Confrim to change congif?(y/n)": config_confirm
     if [[ x"${config_confirm}" == x"y" || x"${config_confirm}" == x"Y" ]]; then
         read -p "Account name:" config_account
         echo -e "${yellow}Your account name will be set to:${config_account}${plain}"
